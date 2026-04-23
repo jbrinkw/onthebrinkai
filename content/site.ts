@@ -5,8 +5,8 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  title: "Designing Tomorrow's World",
-  intro: "Welcome to my portfolio!",
+  title: "AI Systems Engineer",
+  intro: "Building agentic platforms, multi-modal sensing, and the infrastructure that makes real AI useful.",
   ctaLabel: "Explore More",
   ctaHref: "/portfolio",
   images: [
@@ -23,13 +23,13 @@ export const heroContent = {
 
 export const featuredProject = {
   heading: "Featured Project",
-  title: "Luna Hub: Tool & Service Hub",
+  title: "Luna Hub: Personal Automation Platform",
   bullets: [
-    "Supervisor-managed tool hub with Caddy + GitHub OAuth and OpenAI-compatible Agent API",
-    "FastMCP hubs (main + named) to expose tools securely with per-service API keys",
-    "Extension discovery, deterministic ports, restart-safe update queue and config sync",
-    "Hub UI to manage tools, agent presets, extensions, services, and keys in one place",
-    "Caddy front door for auth, Agent API, MCP, and supervisor API with TLS-friendly routing",
+    "Three apps (Hub, ChefByte, CoachByte) shipped as a single React SPA with full dark mode",
+    "~58-tool Cloudflare Worker + Durable Objects MCP at mcp.lunahub.dev — five namespaces spanning CHEFBYTE_* / COACHBYTE_* / OBSIDIAN_* / TODOIST_* / HOMEASSISTANT_*, OAuth 2.1 + API key auth",
+    "OpenAI-compatible /v1/chat/completions endpoint with token-by-token SSE — powers Home Assistant voice preview against any model",
+    "Supabase Realtime drives cross-device state for timers, plans, and macros; nightly Morning Review agent ties an Obsidian goal stack to Todoist execution",
+    "~1,600 tests across pgTAP, web, and worker suites; per-tool observability wrapper on every MCP call",
   ],
   ctaLabel: "View more projects like this",
   ctaHref: "/portfolio",
@@ -39,7 +39,8 @@ export const biography = {
   heading: "Biography",
   title: "Get to Know Me",
   body: [
-    "My passion for AI began in high school when I discovered breakthroughs in GANs and DeepMind's AlphaZero. Since then, I've focused on AI research, recently earning a Computer Science degree from WGU. Now, I'm building a portfolio to enter AI engineering, with the long-term goal of advancing AI alignment research and shaping its future responsibly.",
+    "I'm an AI systems engineer based in Charlotte, NC. I currently lead AI engineering at RevUp Renewable Solutions, and I'm finishing an M.S. in AI at Western Governors University. My work spans agentic infrastructure, multi-modal sensing, and the tooling that makes production AI reliable.",
+    "My interest in AI started in high school with GANs and AlphaZero, and my long-term goal is to contribute to alignment research — the work that determines whether advanced AI ends up a force multiplier for humanity or a failure mode. Active SECRET clearance.",
   ],
   image: { src: "/assets/bio-headshot.png", alt: "Jeremy Brinkworth headshot" },
   ctaLabel: "Read More",
@@ -49,7 +50,7 @@ export const biography = {
 export const portfolioIntro = {
   title: "Projects",
   description:
-    "Selected AI builds: Luna Hub, Live NPC, ChefByte, and an LLM-based floorplan generator.",
+    "Selected AI systems work: Luna Hub (personal automation platform), ChefByte (weight + vision fusion inventory), CoachByte (serverless workout tracker), Live NPC, and an LLM-based floorplan generator.",
 };
 
 export type Project = {
@@ -69,38 +70,62 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Luna Hub: Your Personal AI Automation Platform",
+    title: "Luna Hub: Personal Automation Platform",
     summaryLabel: "Project Summary:",
     summary:
-      "Supervisor-driven AI hub with Caddy as the single entry point, GitHub OAuth, OpenAI-compatible Agent API, and FastMCP. Extensions and services are auto-discovered, port-assigned, and secured with per-service API keys. Hub UI manages tools, presets, and an update queue that syncs configs and restarts cleanly.",
+      "A production-deployed personal automation platform. Three apps (Hub, ChefByte, CoachByte) ship as a single React SPA backed by Supabase and a ~58-tool Cloudflare Worker + Durable Objects MCP endpoint. Extensions connect it to Obsidian, Todoist, and Home Assistant, and a nightly accountability agent closes the loop between a tiered Obsidian goal stack and daily execution in Todoist.",
     featuresLabel: "Features:",
     features: [
-      "Caddy + GitHub OAuth front door for auth, Agent API, MCP, and supervisor API",
-      "OpenAI-compatible Agent API with FastMCP hubs (main + named hubs with API keys)",
-      "Extension discovery with deterministic port assignment and per-service API key generation",
-      "Supervisor orchestrates auth, Agent API, MCP, Hub UI dev server, and extension services",
-      "Update queue + config sync keep master_config and .env consistent; restart-safe",
-      "Hub UI Tool/Agent Preset manager for enabling tools per hub and creating scoped agents",
+      "~58-tool Cloudflare Worker + Durable Objects MCP at mcp.lunahub.dev — five namespaces (CHEFBYTE_*, COACHBYTE_*, OBSIDIAN_*, TODOIST_*, HOMEASSISTANT_*), OAuth 2.1 + API key auth, per-tool observability wrapper",
+      "OpenAI-compatible /v1/chat/completions endpoint with token-by-token SSE — powers Home Assistant voice preview against any model",
+      "Three apps unified in one React 18 + TypeScript SPA with full dark mode, TanStack Query v5 code splitting, and optimistic updates",
+      "Supabase Realtime drives cross-device state for rest timers, plan changes, and macro totals; schema-per-module (hub, coachbyte, chefbyte, private)",
+      "Obsidian extension backed by the GitHub Contents API — project / date-range / patch tools over a tiered goal vault",
+      "Todoist and Home Assistant extensions (task sync, device control, entity status, TV remote)",
+      "Nightly Morning Review agent reconciles yesterday's Todoist completions against commitments and produces the next-day plan",
+      "~1,600 tests across pgTAP, web, and worker suites; staging + prod deploys via Vercel",
     ],
     stack: [
-      "Backend: FastAPI Agent API, FastMCP, Caddy",
-      "Frontend: React, Vite (Hub UI)",
-      "Infrastructure: Supervisor, GitHub OAuth, Docker",
+      "Data: Supabase — schema-per-module (hub, coachbyte, chefbyte, private) with Postgres, Auth, Realtime, Storage, Edge Functions",
+      "Edge: Cloudflare Workers + Durable Objects (MCP, OAuth 2.1)",
+      "Frontend: React 18 + TypeScript, Vite 6, TanStack Query v5, Tailwind v4",
+      "Monorepo: pnpm workspaces + Turborepo, deployed to Vercel",
     ],
     link: {
       label: "LunaHub.dev",
       href: "https://lunahub.dev",
     },
     images: [
-      { src: "/assets/luna/01-dashboard.png", alt: "Luna Hub dashboard overview" },
-      { src: "/assets/luna/02-addon-store.png", alt: "Luna Hub addon store" },
-      { src: "/assets/luna/03-tool-mcp-manager.png", alt: "Luna Hub MCP tool manager" },
-      { src: "/assets/luna/04-extension-tools.png", alt: "Luna Hub extension tools" },
-      { src: "/assets/luna/05-key-manager.png", alt: "Luna Hub key manager" },
-      { src: "/assets/luna/06-infrastructure.png", alt: "Luna Hub infrastructure services" },
-      { src: "/assets/luna/07-extension-manager.png", alt: "Luna Hub extension manager" },
-      { src: "/assets/luna/08-update-manager.png", alt: "Luna Hub update manager" },
+      { src: "/assets/luna/home.png", alt: "Luna Hub home" },
     ],
+  },
+  {
+    title: "CoachByte: Serverless Workout Tracker",
+    introLabel: "What it is:",
+    intro:
+      "A workout tracker that turns a weekly split into sequential, one-tap set completion across every device you own. Runs entirely on Supabase — no edge functions — with Realtime subscriptions keeping the rest timer, today's plan, and PR toasts in sync wherever you are.",
+    summaryLabel: "Why it matters:",
+    summary:
+      "Most trackers demand too much input between sets. CoachByte reduces a workout to pressing one button when you finish a set and watching the timer count you into the next one — the template, load resolution, plate breakdown, and 1RM math are all already done.",
+    featuresLabel: "Highlights:",
+    features: [
+      "Five pages: Today (sequential set completion + plate breakdown), History (keyset pagination, exercise filter), Split (7-day grid editor with relative/absolute loads), PRs (Epley 1RM cards, rep-range pills), Settings",
+      "Weekly split template → daily bootstrap on app open → sequential ordered completion with ad-hoc set injection",
+      "Single-row timer state machine per user (running / paused / expired) — Realtime updates keep phone and desktop in sync",
+      "plpgsql SECURITY DEFINER functions wrap multi-step transactions (set completion, plan updates, PR detection)",
+      "15 MCP tools (COACHBYTE_*) let the Luna Hub agent log sets, update the split, or read history via natural language",
+    ],
+    stack: [
+      "Frontend: React 18 + TypeScript, Vite 6, TanStack Query v5, Tailwind v4",
+      "Data: Supabase (Postgres, Realtime)",
+      "RPC: plpgsql SECURITY DEFINER functions in the private schema",
+      "Agent: 15-tool MCP surface inside the Luna Hub worker",
+    ],
+    link: {
+      label: "lunahub.dev/coach",
+      href: "https://lunahub.dev/coach",
+    },
+    images: [],
   },
   {
     title: "Live NPC: Real-Time AI Societies for Games",
@@ -125,35 +150,34 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "ChefByte: AI-Powered Meal Planning & Nutrition Tracking",
+    title: "ChefByte: Weight + Vision Fusion Inventory",
     introLabel: "Project Motivation:",
     intro:
-      "ChefByte is a free, low-ops food inventory and macro platform. It combines barcode scanning, automated nutrition/storage/expiration fill, macro-density recipe search, shopping automation, and smart-scale ingestion—designed to run on a Supabase + Vercel free-tier footprint.",
-    resultsLabel: "Results:",
-    results: [
-      "Barcode + manual entry with auto-filled nutrition/storage/expiration; macro-linked inventory",
-      "Macro-density recipe search with availability filters and meal-plan integration",
-      "Shopping automation: add-below-minimum, Walmart link generation, import-to-stock",
-      "Price intelligence with batch Walmart scraping and progress tracking",
-      "LiquidTrack device-key flow for smart scale ingestion (API key + Supabase RLS)",
-      "Serverless endpoints on Vercel; Supabase Postgres with per-user RLS for multi-tenant use",
+      "Barcode-first inventory apps die on ADHD friction — you stop scanning, the database diverges from reality, and the whole thing becomes noise. ChefByte replaces scanning with passive sensing: weight deltas from load cells under every shelf, a catch-all scale for everything else, and a camera pipeline that identifies what moved. Weight and vision have both been attempted for inventory separately; fusing them is what makes it work.",
+    summaryLabel: "Architecture:",
+    summary:
+      "The Pi is a cloud edge processor, not a standalone app. One products catalog and one inventory live in Supabase; the Pi caches the slice its classifier needs, then pushes only event decisions (product_id + delta_g) back up — never frames or video. Three shelf kinds share one schema: live shelf (multi-cell scale with camera), catch-all scale (anything without a dedicated spot), and single-item scale (one scale per product, e.g. milk carton, protein tub).",
+    featuresLabel: "Features:",
+    features: [
+      "Weight-triggered sessions with a close-on-stable state machine and a shelf_id discriminator across lots, sessions, and scale events (live_shelf / catch_all / single_item)",
+      "In-flight (NPI) tracker handles on_shelf → in_flight → out transitions with consumption math + a 4h TTL reaper so temporary removals aren't misread as consumption",
+      "LiveTrack Import Wizard — Pi scans a barcode, the analyze-product edge function normalizes it, the Pi reads tare weight, an LLM computes net weight; browser + Pi sync via a single Realtime-synced session row",
+      "Event Viewer triage UI — filter Pi classifier events (All / Applied / Needs Review / Voided), accept or override macros, void events, configure scale pairings",
+      "Barcode scanner with four modes (Purchase / Consume+Macros / Consume-NoMacros / Shopping List), OpenFoodFacts + Claude Haiku fallback for unknown items",
+      "Lot-based inventory keyed on (product_id, location_id, expires_on) with nearest-expiration consumption order, recipe stock badges (CAN MAKE / PARTIAL / NO STOCK), and macro-density + active-time recipe filters",
+      "Walmart-in-Home closes the replenishment loop: shopping list → Walmart deep link → cart delivered directly into the fridge",
     ],
-    images: [
-      { src: "/assets/chefbyte/dashboard.png", alt: "ChefByte dashboard overview" },
-      { src: "/assets/chefbyte/scanner.png", alt: "ChefByte barcode scanner" },
-      { src: "/assets/chefbyte/inventory.png", alt: "ChefByte inventory view" },
-      { src: "/assets/chefbyte/meal-plan.png", alt: "ChefByte meal plan view" },
-      { src: "/assets/chefbyte/shopping.png", alt: "ChefByte shopping list" },
-      { src: "/assets/chefbyte/recipes.png", alt: "ChefByte recipes list" },
-      { src: "/assets/chefbyte/recipe-edit.png", alt: "ChefByte recipe editor" },
-      { src: "/assets/chefbyte/walmart.png", alt: "ChefByte Walmart price manager" },
-      { src: "/assets/chefbyte/liquidtrack-full.png", alt: "ChefByte LiquidTrack integration" },
-      { src: "/assets/chefbyte/settings.png", alt: "ChefByte settings" },
+    stack: [
+      "Edge: Raspberry Pi + Wemos D1 Mini + HX711 load cells + USB cameras",
+      "Data: Supabase (Postgres, Storage, Realtime, RLS)",
+      "Edge Functions: analyze-product, walmart-scrape, shelf-ingest, livetrack-session",
+      "Firmware: C++ (ESP8266 scale nodes — scale-live, scale-catch-all, scale-single-item)",
     ],
     link: {
       label: "ChefByte.app",
       href: "https://chefbyte.app",
     },
+    images: [],
   },
   {
     title: "LLM Powered Floorplan Generator (OLD)",
@@ -182,8 +206,9 @@ export const about = {
     },
   ],
   paragraphs: [
-    "Hi! My name is Jeremy Brinkworth. I have been focused on working in the AI industry since I was in high school. I believe AI has the potential to either drastically improve the world or amplify our problems tenfold. My goal is to be a driving force in ensuring AI development aligns with humanity's best interests, pushing it toward solutions that benefit everyone.",
-    "In my personal time I enjoy sports like mountain biking, skydiving and ultra-endurance races. I also have spent a considerable amount time (and money) building out my home engineering lab. I've used it for a handful of small robotics projects, custom built RC planes and drones.",
+    "Hi — I'm Jeremy Brinkworth. I'm an AI systems engineer based in Charlotte, NC, currently leading AI engineering at RevUp Renewable Solutions and finishing an M.S. in AI at Western Governors University. Active SECRET clearance.",
+    "My interest in AI started in high school — GANs and AlphaZero were the two things that made me take the field seriously. I've been building toward alignment research ever since: the work that decides whether advanced AI ends up a force multiplier for humanity or a failure mode at scale. Most of what you see on this site is infrastructure and tooling that makes real AI useful on the way there.",
+    "Outside of work I mountain bike, skydive, and run ultra-endurance races. I've also spent a considerable amount of time (and money) building out a home engineering lab — small robotics projects, custom RC planes and drones, and the hardware side of the ChefByte build.",
   ],
   images: [
     {
@@ -200,8 +225,8 @@ export const about = {
 export const resumeContent = {
   title: "Résumé",
   description:
-    "Download or view my résumé for a concise overview of my experience, skills, and projects. Drop your résumé PDF into public/resume.pdf to replace this placeholder link.",
+    "Download or view my résumé for a concise overview of my experience, skills, and projects.",
   downloadLabel: "Download Résumé (PDF)",
-  downloadHref: "/resume.pdf",
+  downloadHref: "/Jeremy_Brinkworth_Resume_4_26.pdf",
 };
 

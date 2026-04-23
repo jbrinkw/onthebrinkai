@@ -133,6 +133,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             )}
           </div>
 
+          {safeImages.length > 0 && (
           <div className="space-y-3">
             <div className="relative aspect-video overflow-hidden rounded-3xl border border-white/10 bg-black/80 shadow-lg shadow-cyan-500/10">
               {mounted && activeImage && (
@@ -190,6 +191,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </div>
             )}
           </div>
+          )}
         </div>
       </div>
     </article>

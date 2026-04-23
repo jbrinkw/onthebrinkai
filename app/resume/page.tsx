@@ -16,17 +16,17 @@ export default function ResumePage() {
       <h1 className="sr-only">Résumé</h1>
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/50">
         <object
-          data="/Resume-Jeremy-Brinkworth.pdf"
+          data="/Jeremy_Brinkworth_Resume_4_26.pdf"
           type="application/pdf"
           className="h-[calc(100vh-40px)] w-full"
         >
           <p className="p-4 text-sm text-slate-200">
             If the PDF does not display, download it from{" "}
             <a
-              href="/Resume-Jeremy-Brinkworth.pdf"
+              href="/Jeremy_Brinkworth_Resume_4_26.pdf"
               className="text-cyan-300 hover:text-cyan-200"
             >
-              /Resume-Jeremy-Brinkworth.pdf
+              /Jeremy_Brinkworth_Resume_4_26.pdf
             </a>
             .
           </p>
