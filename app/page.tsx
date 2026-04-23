@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-4 md:col-span-5 md:items-end md:text-right">
             <div className="rounded-2xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 p-4 text-sm text-slate-100 ring-1 ring-white/10">
-              One MCP endpoint, three apps, and every tool your day needs — wired into Obsidian, Todoist, and your home.
+              Live at lunahub.dev. Built and operated solo — MCP server, agent runtime, edge hardware, and three production apps.
             </div>
             <Link
               href={featuredProject.ctaHref}
