@@ -1,52 +1,152 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Hero } from "@/components/hero";
-import { Section } from "@/components/section";
-import { featuredProject, biography } from "@/content/site";
-import { BioCard } from "@/components/bio-card";
+import { FeaturedRotator } from "@/components/featured-rotator";
+import { person, projects } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | Home",
   description:
-    "Portfolio of Jeremy Brinkworth – featured AI projects, biography, and links.",
-  alternates: {
-    canonical: "/",
-  },
+    "Production AI, end-to-end. Jeremy Brinkworth — AI systems engineer shipping MCP servers, agent runtimes, edge hardware, and embedded firmware.",
+  alternates: { canonical: "/" },
 };
 
-export default function Home() {
-  return (
-    <div className="space-y-12 sm:space-y-16">
-      <div className="mx-auto max-w-6xl px-6">
-        <Hero />
-      </div>
+export default function HomePage() {
+  const featured = projects.slice(0, 3);
 
-      <Section kicker={featuredProject.heading} title={featuredProject.title}>
-        <div className="grid gap-8 rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-lg shadow-cyan-500/5 ring-1 ring-white/5 backdrop-blur md:grid-cols-12 md:p-10">
-          <div className="md:col-span-7">
-            <ul className="space-y-2 text-sm leading-relaxed text-slate-200">
-              {featuredProject.bullets.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
+  return (
+    <div className="mx-auto w-full max-w-[1280px] px-6 pb-16 pt-10 lg:px-11 lg:pb-[60px] lg:pt-11">
+      {/* Hero + featured rotation */}
+      <div className="mb-12 grid gap-10 lg:mb-[60px] lg:grid-cols-2 lg:gap-12">
+        {/* Left: hero */}
+        <div>
+          <div
+            className="mb-5 uppercase"
+            style={{
+              fontFamily: "var(--font-mono-jetbrains), monospace",
+              fontSize: 11,
+              color: "#7de2ff",
+              letterSpacing: 2,
+            }}
+          >
+            ◦ 001 &nbsp;·&nbsp; {person.location} &nbsp;·&nbsp;{" "}
+            {person.availability}
           </div>
-          <div className="flex flex-col gap-4 md:col-span-5 md:items-end md:text-right">
-            <div className="rounded-2xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 p-4 text-sm text-slate-100 ring-1 ring-white/10">
-              Live at lunahub.dev. Built and operated solo — MCP server, agent runtime, edge hardware, and three production apps.
-            </div>
+          <h1
+            className="m-0 mb-6 text-[56px] sm:text-[72px] lg:text-[88px]"
+            style={{
+              fontFamily: "var(--font-serif-instrument), serif",
+              fontWeight: 400,
+              lineHeight: 0.95,
+              letterSpacing: -2,
+            }}
+          >
+            Production AI,
+            <br />
+            <em style={{ color: "#7de2ff", fontStyle: "italic" }}>
+              end&#8209;to&#8209;end.
+            </em>
+          </h1>
+          <p
+            className="mb-8"
+            style={{
+              fontSize: 17,
+              lineHeight: 1.55,
+              color: "#b9c3d9",
+              maxWidth: 440,
+              margin: "0 0 32px",
+            }}
+          >
+            I&apos;m {person.name.split(" ")[0]} — an AI systems engineer who
+            ships the whole stack. MCP servers, agent runtimes, edge hardware,
+            embedded firmware. {person.status}.
+          </p>
+          <div className="flex flex-wrap gap-3">
             <Link
-              href={featuredProject.ctaHref}
-              className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/30 transition hover:translate-y-[-1px] hover:bg-cyan-300"
+              href="/portfolio"
+              style={{
+                background: "#7de2ff",
+                color: "#06080f",
+                padding: "12px 22px",
+                borderRadius: 999,
+                fontFamily: "var(--font-mono-jetbrains), monospace",
+                fontWeight: 600,
+                fontSize: 13,
+                letterSpacing: 1,
+              }}
             >
-              {featuredProject.ctaLabel}
+              SEE THE WORK →
+            </Link>
+            <Link
+              href="/resume"
+              style={{
+                background: "transparent",
+                color: "#e6ecf7",
+                border: "1px solid rgba(255,255,255,0.15)",
+                padding: "12px 22px",
+                borderRadius: 999,
+                fontFamily: "var(--font-mono-jetbrains), monospace",
+                fontSize: 13,
+                letterSpacing: 1,
+              }}
+            >
+              RÉSUMÉ
             </Link>
           </div>
         </div>
-      </Section>
 
-      <Section kicker={biography.heading} title="Biography">
-        <BioCard />
-      </Section>
+        {/* Right: featured rotation (client) */}
+        <FeaturedRotator items={featured} />
+      </div>
+
+      {/* ◦ now list */}
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 32 }}>
+        <div className="grid gap-8 lg:grid-cols-[180px_1fr]">
+          <div
+            className="uppercase"
+            style={{
+              fontFamily: "var(--font-mono-jetbrains), monospace",
+              fontSize: 11,
+              color: "#6b7691",
+              letterSpacing: 2,
+            }}
+          >
+            ◦ now
+          </div>
+          <div className="flex flex-col gap-3">
+            {person.now.map((n, i) => (
+              <div
+                key={n}
+                className="flex gap-[18px]"
+                style={{
+                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  paddingBottom: 12,
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono-jetbrains), monospace",
+                    fontSize: 11,
+                    color: "#7de2ff",
+                    width: 28,
+                    flexShrink: 0,
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div
+                  style={{
+                    fontSize: 15,
+                    color: "#d4dcee",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {n}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,28 +1,18 @@
-import Link from "next/link";
-
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-black/70">
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-col leading-tight">
-          <Link
-            href="/"
-            className="text-sm font-semibold text-white hover:underline underline-offset-2"
-          >
-            OnTheBrinkAI
-          </Link>
-          <span className="text-xs text-slate-400">
-            Jeremy Brinkworth&apos;s Portfolio
-          </span>
-        </div>
-        <a
-          href="mailto:jeremy@onthebrink.ai"
-          className="text-sm text-cyan-300 hover:text-cyan-200 underline underline-offset-2"
-        >
-          jeremy@onthebrink.ai
-        </a>
+    <footer
+      className="mt-auto"
+      style={{
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        fontFamily: "var(--font-mono-jetbrains), monospace",
+        fontSize: 11,
+        color: "#6b7691",
+      }}
+    >
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-2 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-11">
+        <div>JB / 2026 · built solo</div>
+        <div>lunahub.dev · github.com/jbrinkw · charlotte, nc</div>
       </div>
     </footer>
   );
 }
-
