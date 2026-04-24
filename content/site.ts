@@ -46,6 +46,7 @@ export type ProjectId =
   | "chefbyte"
   | "coachbyte"
   | "rocket"
+  | "openethos"
   | "livenpc"
   | "floorplan";
 
@@ -300,8 +301,32 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "livenpc",
+    id: "openethos",
     num: "05",
+    title: "Open Ethos",
+    tag: "Civic value calculator",
+    year: "2025 —",
+    status: "Public beta",
+    summary:
+      "A weighted moral calculator at openethos.ai. Users set 0-1 weights across eight value axioms plus social-distance and time-discount parameters, then score a decision factor-by-factor on polarity, intensity, duration, confidence, and scale — deterministic arithmetic, every parameter visible. The thesis: coherence-against-self is the verification standard for civic reasoning that sidesteps bias without appealing to external ground truth.",
+    highlights: [
+      "Eight axioms: life/health, bodily autonomy, civil liberty, wellbeing, fairness, truth/epistemic integrity, long-term societal capacity, social trust",
+      "Per-factor scoring: polarity × intensity × duration × confidence × scale, composed with axiom weights, social-distance, and moral half-life — fully visible arithmetic, no black-box inference",
+      "Framework fixed, weights user-controlled — two users with opposite politics use the identical tool honestly and reach different verdicts",
+      "'Magic factor' escape hatch lets users note what the axioms fail to capture; aggregated across users, becomes signal for framework evolution",
+      "L3 (the mirror) of a planned 5-layer stack — bill ingestion, Socratic tutor, coherence loop, and aggregated deliberation to follow",
+    ],
+    stack: ["Next.js", "Vercel"],
+    link: "openethos.ai",
+    metrics: [
+      ["8", "axioms"],
+      ["0–1", "weights"],
+      ["public", "beta"],
+    ],
+  },
+  {
+    id: "livenpc",
+    num: "06",
     title: "Live NPC",
     tag: "Real-time AI societies for games",
     year: "2024",
@@ -324,7 +349,7 @@ export const projects: Project[] = [
   },
   {
     id: "floorplan",
-    num: "06",
+    num: "07",
     title: "LLM Floorplan Generator",
     tag: "Early spatial-reasoning experiment",
     year: "2021",
@@ -352,6 +377,7 @@ export const projectTagMap: Record<ProjectId, ProjectTag[]> = {
   chefbyte: ["hardware", "agents"],
   coachbyte: ["agents"],
   rocket: ["research"],
+  openethos: ["research"],
   livenpc: ["agents", "research"],
   floorplan: ["research"],
 };
