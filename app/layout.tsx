@@ -41,14 +41,6 @@ export const metadata: Metadata = {
     url: "https://www.onthebrink.ai",
     siteName: "OnTheBrinkAI",
     type: "website",
-    images: [
-      {
-        url: "/assets/bio-headshot.png",
-        width: 1200,
-        height: 630,
-        alt: "Jeremy Brinkworth — AI Systems Engineer",
-      },
-    ],
   },
 };
 
