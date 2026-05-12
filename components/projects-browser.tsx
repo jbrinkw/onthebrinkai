@@ -375,33 +375,6 @@ export function ProjectsBrowser() {
                   </span>
                 ))}
               </div>
-              <div
-                style={{
-                  marginTop: 24,
-                  padding: 14,
-                  borderRadius: 10,
-                  background: "rgba(125,226,255,0.05)",
-                  border: "1px solid rgba(125,226,255,0.15)",
-                  ...MONO,
-                  fontSize: 11,
-                  color: "#b9c3d9",
-                  lineHeight: 1.5,
-                }}
-              >
-                <div
-                  className="mb-1.5 uppercase"
-                  style={{
-                    color: "#7de2ff",
-                    letterSpacing: 1.2,
-                    fontSize: 9.5,
-                  }}
-                >
-                  ◦ why it matters
-                </div>
-                Solo-built, production-deployed. No team, no VC — shipped by one
-                engineer because the tooling to be lazy with AI didn&apos;t
-                exist yet.
-              </div>
             </div>
           </div>
         </div>
