@@ -6,7 +6,7 @@ import { person, projects } from "@/content/site";
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | Home",
   description:
-    "Production AI, end-to-end. Jeremy Brinkworth — AI systems engineer shipping MCP servers, agent runtimes, edge hardware, and embedded firmware.",
+    "Production AI, end-to-end. Jeremy Brinkworth, an AI systems engineer shipping MCP servers, agent runtimes, edge hardware, and embedded firmware.",
   alternates: { canonical: "/" },
 };
 
@@ -56,7 +56,7 @@ export default function HomePage() {
               margin: "0 0 32px",
             }}
           >
-            I&apos;m {person.name.split(" ")[0]} — an AI systems engineer who
+            I&apos;m {person.name.split(" ")[0]}, an AI systems engineer who
             ships the whole stack. MCP servers, agent runtimes, edge hardware,
             embedded firmware. {person.status}.
           </p>

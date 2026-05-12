@@ -1,4 +1,4 @@
-// Portfolio data — ported from the "Signal" design direction.
+// Portfolio data, ported from the "Signal" design direction.
 // Shape mirrors window.PORTFOLIO_DATA from the design bundle so the JSX
 // patterns in direction-a.jsx translate directly onto these fields.
 
@@ -47,7 +47,6 @@ export type ProjectId =
   | "coachbyte"
   | "rocket"
   | "openethos"
-  | "livenpc"
   | "floorplan";
 
 export type ProjectTag = "agents" | "hardware" | "research";
@@ -73,18 +72,18 @@ export const person: Person = {
   role: "AI Systems Engineer",
   location: "Charlotte, NC",
   tagline:
-    "Production AI, end-to-end — MCP servers, agent runtimes, edge hardware, embedded firmware.",
+    "Production AI, end-to-end. MCP servers, agent runtimes, edge hardware, embedded firmware.",
   availability: "Open to senior / staff AI infra roles",
   status: "Lead AI Engineer @ RevUp AI",
   clearance: "Active SECRET clearance",
   reserve: "Corporal (E-4), USMC Reserve",
-  education: "M.S. Computer Science, WGU — expected May 2026",
+  education: "M.S. Computer Science, WGU (expected May 2026)",
   github: "github.com/jbrinkw",
   linkedin: "linkedin.com/in/jeremy-brinkworth-424129180",
   email: "jeremy@onthebrink.ai",
   now: [
-    "Shipping RevMigrate — agentic SQL Server → PostgreSQL migration on Amazon Bedrock",
-    "Operating lunahub.dev daily — 65 MCP tools across 5 extensions",
+    "Shipping RevMigrate, an agentic SQL Server → PostgreSQL migration on Amazon Bedrock",
+    "Operating lunahub.dev daily: 65 MCP tools across 5 extensions",
     "Nightly Morning Review agent reconciles Obsidian goals ↔ Todoist execution",
   ],
 };
@@ -130,17 +129,17 @@ export const experience: Experience[] = [
   {
     role: "Lead AI Engineer",
     org: "RevUp AI",
-    period: "2024 — present",
+    period: "2024 – present",
     location: "Remote",
     bullets: [
       "Lead RevMigrate: agentic SQL Server → PostgreSQL migration on Amazon Bedrock with async phase orchestration and per-object context assembly",
-      "Upgraded the Agentic QA platform codegen pipeline for UNSW — lifted Ghost Inspector triage accuracy from 0.24 → 0.68 via self-consistency ensemble evaluation",
+      "Upgraded the Agentic QA platform codegen pipeline for UNSW; lifted Ghost Inspector triage accuracy from 0.24 → 0.68 via self-consistency ensemble evaluation",
     ],
   },
   {
-    role: "Data Systems Administrator — Corporal (E-4)",
+    role: "Data Systems Administrator, Corporal (E-4)",
     org: "U.S. Marine Corps Reserve",
-    period: "2021 — present",
+    period: "2021 – present",
     location: "Active SECRET clearance",
     bullets: [
       "Administer secure data systems; drill schedule alongside full-time engineering role",
@@ -149,7 +148,7 @@ export const experience: Experience[] = [
   {
     role: "Founder / Solo builder",
     org: "Luna AI Platform",
-    period: "2024 — present",
+    period: "2024 – present",
     location: "lunahub.dev",
     bullets: [
       "Cloudflare Workers MCP server exposing 65 tools over Streamable HTTP + SSE",
@@ -186,7 +185,7 @@ export const projects: Project[] = [
     num: "01",
     title: "Luna Hub",
     tag: "Personal automation platform",
-    year: "2024 —",
+    year: "2024–",
     status: "Live in production",
     summary:
       "A publicly accessible AI platform at lunahub.dev. Three-app React SPA (Hub, ChefByte, CoachByte) on Postgres + Cloudflare Workers + Vercel. The thesis: give consumer AI real, structured access to a user's daily workflow via a production MCP server anyone on the internet can connect to.",
@@ -194,7 +193,7 @@ export const projects: Project[] = [
       "65 MCP tools across 5 extensions (ChefByte 28, CoachByte 16, Obsidian 8, Todoist 8, Home Assistant 5) over Streamable HTTP + SSE",
       "OpenAI-compatible /v1/chat/completions with tool-call streaming and up to 10 tool rounds per session",
       "OAuth 2.1 discovery (RFC 8414 / 9728) + SHA-256-hashed API-key auth on the same endpoint",
-      "Non-blocking observability via ctx.waitUntil() — every tool call logged with redacted args, status, duration",
+      "Non-blocking observability via ctx.waitUntil(); every tool call logged with redacted args, status, duration",
       "Nightly agent calls 7 MCP tools to close yesterday, reconcile the goal stack, and write tomorrow's brief",
     ],
     stack: [
@@ -217,16 +216,16 @@ export const projects: Project[] = [
     num: "02",
     title: "ChefByte",
     tag: "Agent-native food management",
-    year: "2024 —",
+    year: "2024–",
     status: "Hardware + agent stack",
     summary:
-      "Every food tracker dies on the barcode-scan problem. ChefByte removes the friction entirely — load cells under each shelf weigh what changed, a VLM diffs before/after shelf images to name it, and when stock runs low an agent generates a Walmart cart deep-link that delivers straight to the fridge.",
+      "Every food tracker dies on the barcode-scan problem. ChefByte removes the friction entirely: load cells under each shelf weigh what changed, a VLM diffs before/after shelf images to name it, and when stock runs low an agent generates a Walmart cart deep-link that delivers straight to the fridge.",
     highlights: [
       "Three ESP8266 scale kinds (live shelf / catch-all / single-item) share one event schema with EEPROM-versioned configs (magic 0xBEEF0007)",
-      "Every shelf event triggers Claude Sonnet 4.6 change-detection — before/after diff, no custom CV model",
+      "Every shelf event triggers Claude Sonnet 4.6 change-detection: before/after diff, no custom CV model",
       "Pi is a cloud edge processor: only product_id + delta-gram events go upstream, never raw frames",
       "In-flight tracker reconciles on_shelf → in_flight → out with TTL reaper so temporary removals aren't misread as consumption",
-      "Walmart cart deep-link closes the loop — shopping list → /ip/…/ID parse → bulk-add URL → delivered",
+      "Walmart cart deep-link closes the loop: shopping list → /ip/…/ID parse → bulk-add URL → delivered",
     ],
     stack: [
       "Raspberry Pi",
@@ -235,7 +234,6 @@ export const projects: Project[] = [
       "Supabase (17 tables)",
       "28 MCP tools",
     ],
-    link: "chefbyte.app",
     metrics: [
       ["3", "scale types"],
       ["28", "agent tools"],
@@ -247,12 +245,12 @@ export const projects: Project[] = [
     num: "03",
     title: "CoachByte",
     tag: "Serverless workout tracker",
-    year: "2024 —",
+    year: "2024–",
     status: "Live",
     summary:
-      "A serverless strength-training tracker inside LunaHub. Weekly split template → daily plan bootstrap → sequential set completion, with a DB-backed rest timer and Epley 1RM tracking. All business logic lives in plpgsql SECURITY DEFINER functions — no edge functions.",
+      "A serverless strength-training tracker inside LunaHub. Weekly split template → daily plan bootstrap → sequential set completion, with a DB-backed rest timer and Epley 1RM tracking. All business logic lives in plpgsql SECURITY DEFINER functions, no edge functions.",
     highlights: [
-      "Single-row timer state machine per user — Supabase Realtime syncs pause / resume / reset mid-set across phone and desktop",
+      "Single-row timer state machine per user: Supabase Realtime syncs pause / resume / reset mid-set across phone and desktop",
       "plpgsql SECURITY DEFINER wraps set completion, plan updates, ad-hoc set injection, and PR detection atomically",
       "16 COACHBYTE_* MCP tools let the LunaHub agent log sets, start timers, and read PR history via natural language",
       "Five pages: Today (sequential completion + plate breakdown), History (keyset pagination), Split (7-day editor), PRs (Epley cards), Settings",
@@ -277,15 +275,15 @@ export const projects: Project[] = [
     title: "ContinuousRocket",
     tag: "Hierarchical Minecraft agent",
     year: "2025",
-    status: "Research — arXiv target",
+    status: "Research, arXiv target",
     summary:
-      "A hierarchical Minecraft agent that splits cognition across two speeds. VPT (OpenAI's Video PreTraining model, trained on ~70k hours of Minecraft gameplay) handles reactive motor control at ~20Hz; a Qwen3-VL-8B planner handles scene understanding and goals at ~1Hz. The novel contribution is the learned latent bridge — continuous conditioning vectors instead of discrete commands.",
+      "A hierarchical Minecraft agent that splits cognition across two speeds. VPT (OpenAI's Video PreTraining model, trained on ~70k hours of Minecraft gameplay) handles reactive motor control at ~20Hz; a Qwen3-VL-8B planner handles scene understanding and goals at ~1Hz. The novel contribution is the learned latent bridge: continuous conditioning vectors instead of discrete commands.",
     highlights: [
-      "Fast body (≈ 20Hz VPT) + slow planner (≈ 1Hz Qwen3-VL-8B) — strategic context updates without blocking the 20Hz loop",
-      "Latent conditioning bridge: VLM emits continuous vectors that steer VPT policy state directly — no text, no discrete subgoals",
+      "Fast body (≈ 20Hz VPT) + slow planner (≈ 1Hz Qwen3-VL-8B): strategic context updates without blocking the 20Hz loop",
+      "Latent conditioning bridge: VLM emits continuous vectors that steer VPT policy state directly. No text, no discrete subgoals",
       "Bridge-training: behavioral cloning from paired demos vs. RL with VLM-derived reward",
-      "Builds on VPT, STEVE-1, GROOT, MineCLIP — departs by replacing command handoff with continuous conditioning across timescales",
-      "Target venues: NeurIPS, ICML, ICLR — PhD-admissions differentiator",
+      "Builds on VPT, STEVE-1, GROOT, MineCLIP; departs by replacing command handoff with continuous conditioning across timescales",
+      "Target venues: NeurIPS, ICML, ICLR (PhD-admissions differentiator)",
     ],
     stack: [
       "VPT",
@@ -305,16 +303,16 @@ export const projects: Project[] = [
     num: "05",
     title: "Open Ethos",
     tag: "Civic value calculator",
-    year: "2025 —",
+    year: "2025–",
     status: "Public beta",
     summary:
-      "A weighted moral calculator at openethos.ai. Users set 0-1 weights across eight value axioms plus social-distance and time-discount parameters, then score a decision factor-by-factor on polarity, intensity, duration, confidence, and scale — deterministic arithmetic, every parameter visible. The thesis: coherence-against-self is the verification standard for civic reasoning that sidesteps bias without appealing to external ground truth.",
+      "A weighted moral calculator at openethos.ai. Users set 0-1 weights across eight value axioms plus social-distance and time-discount parameters, then score a decision factor-by-factor on polarity, intensity, duration, confidence, and scale. Deterministic arithmetic, every parameter visible. The thesis: coherence-against-self is the verification standard for civic reasoning that sidesteps bias without appealing to external ground truth.",
     highlights: [
       "Eight axioms: life/health, bodily autonomy, civil liberty, wellbeing, fairness, truth/epistemic integrity, long-term societal capacity, social trust",
-      "Per-factor scoring: polarity × intensity × duration × confidence × scale, composed with axiom weights, social-distance, and moral half-life — fully visible arithmetic, no black-box inference",
-      "Framework fixed, weights user-controlled — two users with opposite politics use the identical tool honestly and reach different verdicts",
+      "Per-factor scoring: polarity × intensity × duration × confidence × scale, composed with axiom weights, social-distance, and moral half-life. Fully visible arithmetic, no black-box inference",
+      "Framework fixed, weights user-controlled: two users with opposite politics use the identical tool honestly and reach different verdicts",
       "'Magic factor' escape hatch lets users note what the axioms fail to capture; aggregated across users, becomes signal for framework evolution",
-      "L3 (the mirror) of a planned 5-layer stack — bill ingestion, Socratic tutor, coherence loop, and aggregated deliberation to follow",
+      "L3 (the mirror) of a planned 5-layer stack: bill ingestion, Socratic tutor, coherence loop, and aggregated deliberation to follow",
     ],
     stack: ["Next.js", "Vercel"],
     link: "openethos.ai",
@@ -325,37 +323,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "livenpc",
-    num: "06",
-    title: "Live NPC",
-    tag: "Real-time AI societies for games",
-    year: "2024",
-    status: "Hugging Face Space",
-    summary:
-      "An agent framework that makes LLM-driven NPCs feel present in a live game world instead of trapped in turn-taking chat. Continuous perception, navigation, action, and speech in one deterministic loop.",
-    highlights: [
-      "Standardized real-time tool layer — any game matching the spec can host",
-      "Continuous perception + routing + actions",
-      "Personality-first architecture drives behavior and dialogue tone",
-      "JSON socket protocol with trigger coalescing",
-    ],
-    stack: ["Python", "LLM agents", "JSON socket protocol", "Gradio"],
-    link: "huggingface.co/spaces/jbrinkw/live-npc",
-    metrics: [
-      ["continuous", "loop"],
-      ["JSON", "protocol"],
-      ["N-agent", "testbed"],
-    ],
-  },
-  {
     id: "floorplan",
-    num: "07",
+    num: "06",
     title: "LLM Floorplan Generator",
     tag: "Early spatial-reasoning experiment",
     year: "2021",
     status: "Archived",
     summary:
-      "In 2021 — GPT-3 just out, years before tool-use was standard — augmenting an LLM with a hardcoded reasoning chain and automated error correction to generate coherent game-world layouts.",
+      "In 2021 (GPT-3 just out, years before tool-use was standard), augmenting an LLM with a hardcoded reasoning chain and automated error correction to generate coherent game-world layouts.",
     highlights: [
       "Hardcoded 7-step reasoning chain for room coordinate generation",
       "Per-step error checking via secondary LLM or validator scripts",
@@ -378,7 +353,6 @@ export const projectTagMap: Record<ProjectId, ProjectTag[]> = {
   coachbyte: ["agents"],
   rocket: ["research"],
   openethos: ["research"],
-  livenpc: ["agents", "research"],
   floorplan: ["research"],
 };
 

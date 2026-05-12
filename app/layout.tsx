@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | Jeremy Brinkworth",
   description:
-    "Production AI, end-to-end — Jeremy Brinkworth's portfolio. MCP servers, agent runtimes, edge hardware, embedded firmware.",
+    "Production AI, end-to-end. Jeremy Brinkworth's portfolio. MCP servers, agent runtimes, edge hardware, embedded firmware.",
   metadataBase: new URL("https://www.onthebrink.ai"),
   alternates: {
     canonical: "https://www.onthebrink.ai",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OnTheBrinkAI | Jeremy Brinkworth",
     description:
-      "AI systems engineer — Luna Hub, ChefByte, CoachByte, ContinuousRocket. Production AI, end-to-end.",
+      "AI systems engineer: Luna Hub, ChefByte, CoachByte, ContinuousRocket. Production AI, end-to-end.",
     url: "https://www.onthebrink.ai",
     siteName: "OnTheBrinkAI",
     type: "website",

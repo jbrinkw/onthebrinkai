@@ -56,7 +56,7 @@ a {
   text-decoration: none;
 }
 
-/* Fixed grain / ambient gradient overlay — Signal direction. */
+/* Fixed grain / ambient gradient overlay, Signal direction. */
 .grain-overlay {
   position: fixed;
   inset: 0;

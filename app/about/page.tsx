@@ -5,7 +5,7 @@ import { person, skills } from "@/content/site";
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | About",
   description:
-    "About Jeremy Brinkworth — Lead AI Engineer at RevUp AI, solo operator of lunahub.dev, Marine Corps reservist, alignment-research bound.",
+    "About Jeremy Brinkworth, Lead AI Engineer at RevUp AI, solo operator of lunahub.dev, Marine Corps reservist, alignment-research bound.",
   alternates: { canonical: "/about" },
 };
 
@@ -79,7 +79,7 @@ export default function AboutPage() {
             Lead AI Engineer at <span style={{ color: "#7de2ff" }}>RevUp AI</span>,
             building agentic SQL migration on Bedrock and a QA codegen pipeline
             that lifted triage accuracy from 0.24 → 0.68. On the side I operate{" "}
-            <span style={{ color: "#7de2ff" }}>lunahub.dev</span> — a production
+            <span style={{ color: "#7de2ff" }}>lunahub.dev</span>, a production
             MCP server and three-app frontend I use every day.
           </p>
           <p
@@ -91,7 +91,7 @@ export default function AboutPage() {
             }}
           >
             My interest in AI started with GANs and AlphaZero; my long-term
-            target is alignment research — the work that decides whether
+            target is alignment research, the work that decides whether
             advanced AI ends up a force multiplier or a failure mode. Most of
             what you see here is infrastructure toward that end.
           </p>

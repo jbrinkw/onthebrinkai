@@ -4,7 +4,7 @@ import { person } from "@/content/site";
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | Résumé",
   description:
-    "Résumé for Jeremy Brinkworth — Agentic AI Engineer. Experience, projects, skills, education, and certifications. PDF download available.",
+    "Résumé for Jeremy Brinkworth, Agentic AI Engineer. Experience, projects, skills, education, and certifications. PDF download available.",
   alternates: { canonical: "/resume" },
   robots: { index: true, follow: true },
 };
