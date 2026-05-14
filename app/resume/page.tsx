@@ -47,9 +47,9 @@ type ResumeExperience = {
 
 const resumeExperience: ResumeExperience[] = [
   {
-    role: "Lead AI Engineer",
+    role: "Lead AI Engineer (Contract)",
     org: "RevUp AI",
-    period: "Dec 2025 – Present",
+    period: "Dec 2025 – Feb 2026",
     location: "Remote",
     bullets: [
       "Designed and led RevMigrate, an agentic SQL Server → PostgreSQL migration system on Amazon Bedrock with async phase orchestration and per-object context assembly → delivered 100% POC success.",

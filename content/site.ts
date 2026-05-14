@@ -127,9 +127,9 @@ export const skills: Skills = {
 
 export const experience: Experience[] = [
   {
-    role: "Lead AI Engineer",
+    role: "Lead AI Engineer (Contract)",
     org: "RevUp AI",
-    period: "2024 – present",
+    period: "Dec 2025 – Feb 2026",
     location: "Remote",
     bullets: [
       "Lead RevMigrate: agentic SQL Server → PostgreSQL migration on Amazon Bedrock with async phase orchestration and per-object context assembly",
