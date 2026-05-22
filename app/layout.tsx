@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OnTheBrinkAI | Jeremy Brinkworth",
     description:
-      "AI systems engineer: Luna Hub, ChefByte, CoachByte, ContinuousRocket. Production AI, end-to-end.",
+      "AI systems engineer: LunaHub, ChefByte, CoachByte, ContinuousSteve. Production AI, end-to-end.",
     url: "https://www.onthebrink.ai",
     siteName: "OnTheBrinkAI",
     type: "website",
@@ -53,9 +53,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${interTight.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} min-h-screen overflow-x-hidden`}
-        style={{ backgroundColor: "#06080f", color: "#e6ecf7" }}
+        style={{ backgroundColor: "#06080f", color: "#e8ecf4" }}
       >
-        <div className="grain-overlay" aria-hidden />
         <div className="relative flex min-h-screen flex-col">
           <NavBar />
           <main className="flex-1">{children}</main>

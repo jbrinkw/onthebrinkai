@@ -4,7 +4,7 @@ import { ProjectsBrowser } from "@/components/projects-browser";
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | Projects",
   description:
-    "Selected work: Luna Hub, ChefByte, CoachByte, ContinuousRocket, Open Ethos, and a 2021 LLM floorplan experiment. Case studies with live links and stack details.",
+    "Selected work: LunaHub, ChefByte, CoachByte, ContinuousSteve, LiveNPC, Open Ethos, an LLM floor-plan experiment, and a 2018 self-driving go-kart.",
   alternates: { canonical: "/portfolio" },
 };
 
