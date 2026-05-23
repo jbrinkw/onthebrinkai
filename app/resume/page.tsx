@@ -47,11 +47,11 @@ const resumeExperience: ResumeExperience[] = [
   },
   {
     role: "Founder / Product & AI Systems Lead",
-    org: "Luna AI Platform",
+    org: "LunaHub",
     period: "Feb 2025 – Present",
     location: "Charlotte, NC",
     bullets: [
-      "Build and operate Luna Hub Lite, a publicly accessible AI platform at lunahub.dev. Three-app React SPA backed by PostgreSQL on Supabase (31 tables), Cloudflare Workers, and Vercel.",
+      "Build and operate LunaHub, a publicly accessible AI platform at lunahub.dev. Three-app React SPA backed by PostgreSQL on Supabase (31 tables), Cloudflare Workers, and Vercel.",
       "Cloudflare Workers MCP server at mcp.lunahub.dev exposing 65 tools across 5 extensions (Obsidian, Todoist, Home Assistant, ChefByte, CoachByte) over Streamable HTTP, with OAuth 2.1 via Supabase and hashed API-key auth.",
       "OpenAI-compatible chat-completions endpoint with tool-call streaming and multi-round agent orchestration; lets any OpenAI-API-compatible client act as a LunaHub agent. Non-blocking observability layer captures every tool call for eval.",
     ],
@@ -80,14 +80,14 @@ const resumeProjects: ResumeProject[] = [
     tagline:
       "agent-native food management with passive inventory via Wi-Fi scales and VLM vision",
     bullets: [
-      "Exposes 28 MCP tools letting AI agents manage inventory end-to-end: meal planning, shopping-list reconciliation, and Walmart cart deep-link checkout.",
+      "Exposes ~30 MCP tools letting AI agents manage inventory end-to-end: meal planning, shopping-list reconciliation, and Walmart cart deep-link checkout.",
       "Passive Wi-Fi scale inventory: weight-change events trigger updates with no barcode scanning and no user input, removing the friction that kills adoption of conventional food trackers.",
       "VLM change-detection: weight events trigger image capture; a vision-language model diffs before/after shelf images and reports semantic changes (items added or removed), feeding inventory state without a custom CV model.",
       "Edge optimization: diagnosed and fixed a vision-capture bottleneck on Raspberry Pi, raising throughput from 0.5 to 10 fps and dropping CPU usage from 72% to 36%.",
     ],
   },
   {
-    name: "Continuous Steve",
+    name: "ContinuousSteve",
     tagline:
       "hierarchical Minecraft agent, active research targeting arXiv/workshop",
     bullets: [

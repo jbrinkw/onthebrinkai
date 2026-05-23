@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { person, skills } from "@/content/site";
+import { OutsideWorkGallery } from "@/components/outside-work-gallery";
+import { person } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "OnTheBrinkAI | About",
   description:
-    "About Jeremy Brinkworth, Lead AI Engineer at RevUp AI, solo operator of lunahub.dev, Marine Corps reservist, alignment-research bound.",
+    "About Jeremy Brinkworth, AI engineer building lunahub.dev, with recent contract work leading agentic systems. Marine Corps reservist, Charlotte NC.",
   alternates: { canonical: "/about" },
 };
 
@@ -66,11 +67,12 @@ export default function AboutPage() {
                 color: "#b9c3d9",
               }}
             >
-              Lead AI Engineer at{" "}
-              <span style={{ color: "#e8ecf4" }}>RevUp AI</span>, building
-              RevMigrate - an agentic SQL Server → PostgreSQL migration on
-              Amazon Bedrock with async phase orchestration and per-object
-              context assembly.
+              Hi! My name is Jeremy Brinkworth. I have been focused on working
+              in the AI industry since I was in high school. I believe AI has
+              the potential to either drastically improve the world or amplify
+              our problems tenfold. My goal is to be a driving force in
+              ensuring AI development aligns with humanity&apos;s best
+              interests, pushing it toward solutions that benefit everyone.
             </p>
             <p
               style={{
@@ -80,11 +82,9 @@ export default function AboutPage() {
                 color: "#b9c3d9",
               }}
             >
-              On the side I operate{" "}
-              <span style={{ color: "#e8ecf4" }}>lunahub.dev</span> - a
-              Cloudflare Workers MCP server exposing 65 tools, an
-              OpenAI-compatible chat endpoint, and three React apps I use every
-              day.
+              Professionally I&apos;ve done contract work as a lead AI
+              engineer. Most recently that was designing an agentic SQL Server
+              → PostgreSQL migration system on Amazon Bedrock.
             </p>
             <p
               style={{
@@ -94,21 +94,35 @@ export default function AboutPage() {
                 color: "#b9c3d9",
               }}
             >
-              My interest in AI started with GANs and AlphaZero; my long-term
-              target is alignment research. Most of what you see here is
-              infrastructure and tooling toward that end.
+              On my own I&apos;m building{" "}
+              <a
+                href="https://lunahub.dev"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: "#7de2ff",
+                  borderBottom: "1px solid rgba(125,226,255,0.4)",
+                  paddingBottom: 1,
+                }}
+              >
+                lunahub.dev
+              </a>
+              , a pursuit of AI tools that reduce the overhead of maintaining
+              a healthy life.
             </p>
             <p
               style={{
                 margin: 0,
-                fontSize: 14,
+                fontSize: 15,
                 lineHeight: 1.65,
-                color: "#6b7691",
+                color: "#b9c3d9",
               }}
             >
-              Corporal (E-4) Data Systems Administrator, USMC Reserve. Active
-              SECRET clearance. Outside work: mountain bike, skydive,
-              ultra-endurance.
+              In my personal time I enjoy sports like mountain biking,
+              skydiving and ultra-endurance races. I also have spent a
+              considerable amount time (and money) building out my home
+              engineering lab. I&apos;ve used it for a handful of small
+              robotics projects, custom built RC planes and drones.
             </p>
           </div>
         </div>
@@ -152,32 +166,41 @@ export default function AboutPage() {
         }}
       />
 
-      {/* Stack */}
-      <div className="mb-12 grid gap-12 lg:grid-cols-[180px_1fr]">
-        <div style={LABEL}>Stack</div>
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
-          {Object.entries(skills).map(([cat, items]) => (
-            <div key={cat}>
-              <div
-                style={{
-                  fontSize: 12,
-                  color: "#7de2ff",
-                  marginBottom: 12,
-                  fontWeight: 500,
-                }}
-              >
-                {cat}
-              </div>
-              <div className="flex flex-col gap-[7px]">
-                {items.map((i) => (
-                  <div key={i} style={{ fontSize: 13, color: "#b9c3d9" }}>
-                    {i}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Outside of work */}
+      <div className="mb-12">
+        <div style={{ ...LABEL, marginBottom: 18 }}>Outside of work</div>
+        <OutsideWorkGallery
+          photos={[
+            {
+              src: "/assets/about-skydive.jpg",
+              alt: "Tandem skydive in formation",
+            },
+            {
+              src: "/assets/about-snow-ride.jpg",
+              alt: "Motorcycle in heavy snow with dog",
+            },
+            {
+              src: "/assets/about-dog.jpg",
+              alt: "Dog on the beach",
+            },
+            {
+              src: "/assets/about-moto.jpg",
+              alt: "Sport motorcycle in parking lot",
+            },
+            {
+              src: "/assets/about-m8.jpg",
+              alt: "BMW M8 at autocross",
+            },
+            {
+              src: "/assets/about-drone.jpg",
+              alt: "Custom-built FPV drone with 3D-printed propellers on the workbench",
+            },
+            {
+              src: "/assets/about-welding.jpg",
+              alt: "Welding in the home shop",
+            },
+          ]}
+        />
       </div>
 
       <hr
