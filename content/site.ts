@@ -72,6 +72,7 @@ export type Project = {
   video?: ProjectVideo;
   readMore?: ReadMoreConfig;
   wip?: boolean;
+  live?: boolean;
 };
 
 export const person: Person = {
@@ -167,6 +168,7 @@ export const projects: Project[] = [
     year: "2024–",
     status: "Live in production",
     link: "lunahub.dev",
+    live: true,
     paragraphs: [
       "LunaHub is a serverless platform for managing MCP tools from various sources, free to sign up and use. It includes ChefByte and CoachByte, along with a few extensions targeted at productivity assistance. You can connect it to your AI chat account, like ChatGPT or Claude, and use all of your tools, as well as connect it to your compatible smart speaker.",
       "LunaHub originally started as a feature of my ChefByte project, as a way to bridge AI tools to a custom MCP server for AI chat interaction and an LLM agent server with the tools built in for my Home Assistant smart speaker. After I added a few of my other projects, I realized LunaHub itself would be a great product to develop on its own as an easy way to manage MCP tools from various sources and expose the API for the smart speaker. At the time, I developed it into a platform you could run in your own home lab or cloud machine, which is still on my GitHub today. I later pivoted it to a full serverless platform that would be essentially free to serve and way easier to use.",
@@ -193,6 +195,7 @@ export const projects: Project[] = [
     year: "2024–",
     status: "Hardware + agent stack",
     link: "lunahub.dev/chef",
+    live: true,
     paragraphs: [
       "I got the idea for ChefByte during a period when I was so focused on work that I didn't really have time to think about properly maintaining my diet. This is a pretty common issue that many people struggle with. Unfortunately, household food robots are still pretty far off, so I designed the next best thing. ChefByte is designed to remove as much friction from maintaining a healthy diet as possible, so busy people can stay on track without sacrificing their productivity.",
       "ChefByte can do all of the basic things other similar legacy apps can do, like track inventory, save recipes, create shopping lists, etc., alongside a set of features that differentiate it from every other product in the space. I already had a unique product when I combined a basic kitchen manager with macro tracking, all built around an MCP server you can plug into any AI agent system. But despite it being a major improvement over the current competition, I wasn't happy with the user experience yet. Both macro trackers and inventory managers are rarely used long-term by consumers because eventually the time and energy needed to keep these tools updated outweighs the benefit the user perceives. ChefByte tackles both of these problems primarily through the LiveTrack system, alongside a wider range of integrated features than any similar product.",
@@ -237,6 +240,7 @@ export const projects: Project[] = [
     year: "2024–",
     status: "Live",
     link: "lunahub.dev/coach",
+    live: true,
     paragraphs: [
       "CoachByte is a workout tracker currently targeted toward weight training. It does everything you'd expect a workout tracker to do, with a few special features. It is a LunaHub app, so it exposes the full control surface via MCP. You can have your AI agent view and update your workout plan day by day. If you're feeling off and want a lighter workout, you can describe how you're feeling, and the AI can adapt your plan on the fly. Another small feature, and my favorite, is that it has an API, so if you put something like a magnetic Zigbee button on your rack, it will ping the server to complete the current set, start the rest timer, and make a custom sound. So you can use Pavlovian training techniques to maintain your gains. I get a satisfying chime every time I finish a set.",
     ],
@@ -312,6 +316,7 @@ export const projects: Project[] = [
     status: "Public beta",
     link: "openethos.ai",
     wip: true,
+    live: true,
     paragraphs: [
       "It takes a lot to be an informed political citizen, as it requires much more time than most people have. My idea for OpenEthos was born out of frustration with how backwards, inefficient, and corrupt politics and government can be. So many things fly under the radar simply because there aren't enough smart, unbiased people to check everything. If there were a system that could deterministically evaluate decisions against the user's own values, or against the values a public figure or institution has committed to, you could flag the ones that don't hold up before they go into effect. That is the goal of OpenEthos. It is the ethical decision model at the core of a deterministic evaluation framework.",
       "The engine works by having the user calibrate weights across a fixed set of moral axioms, then scoring a specific decision by decomposing it into factors with explicit intensity, duration, confidence, and scope. The output is a verdict with a strength score that distinguishes a clean call from a contested one. Once a user has their calibration set, running new decisions through it becomes trivial, and popular presets lower the barrier for anyone starting fresh. Even coarse presets are enough to flag policy that fails by the standards it claims to represent. In effect, the system makes corruption and incoherence harder to sustain by collapsing the cost of catching them. More detail is in the [OpenEthos user guide](https://openethos.ai).",

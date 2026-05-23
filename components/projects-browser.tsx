@@ -454,6 +454,25 @@ export function ProjectsBrowser() {
                       }}
                     >
                       {p.title}
+                      {p.live && (
+                        <span
+                          style={{
+                            fontFamily: "inherit",
+                            fontSize: 9,
+                            letterSpacing: 0.6,
+                            color: "#8be9a7",
+                            border: "1px solid rgba(139, 233, 167, 0.45)",
+                            borderRadius: 999,
+                            padding: "1px 6px",
+                            textTransform: "uppercase",
+                            fontWeight: 600,
+                            position: "relative",
+                            top: -2,
+                          }}
+                        >
+                          Live
+                        </span>
+                      )}
                       {p.wip && (
                         <span
                           style={{
@@ -520,6 +539,23 @@ export function ProjectsBrowser() {
               <span>{visibleActive.year}</span>
               <span>·</span>
               <span>{visibleActive.status}</span>
+              {visibleActive.live && (
+                <span
+                  style={{
+                    marginLeft: 4,
+                    fontSize: 10,
+                    letterSpacing: 0.8,
+                    color: "#8be9a7",
+                    border: "1px solid rgba(139, 233, 167, 0.45)",
+                    borderRadius: 999,
+                    padding: "2px 8px",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                  }}
+                >
+                  Live
+                </span>
+              )}
               {visibleActive.wip && (
                 <span
                   style={{
