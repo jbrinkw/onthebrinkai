@@ -151,10 +151,11 @@ export const education: Education[] = [
 ];
 
 export const certs: string[] = [
-  "AWS Certified Generative AI Developer Professional",
   "AWS ML Engineer Associate",
   "AWS AI Practitioner",
   "AWS Cloud Practitioner",
+  "CompTIA SecAI+",
+  "CompTIA Security+",
   "CompTIA Data+",
   "LPI Linux Essentials",
 ];
