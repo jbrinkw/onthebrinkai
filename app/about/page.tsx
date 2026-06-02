@@ -120,7 +120,7 @@ export default function AboutPage() {
             >
               In my personal time I enjoy sports like mountain biking,
               skydiving and ultra-endurance races. I also have spent a
-              considerable amount time (and money) building out my home
+              considerable amount time building out my home
               engineering lab. I&apos;ve used it for a handful of small
               robotics projects, custom built RC planes and drones.
             </p>

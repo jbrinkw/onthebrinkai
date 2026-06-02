@@ -81,7 +81,7 @@ export const person: Person = {
   location: "Charlotte, NC",
   clearance: "Active SECRET clearance",
   reserve: "Corporal (E-4), USMC Reserve",
-  education: "M.S. Computer Science, WGU (expected June 2026)",
+  education: "M.S. Computer Science, WGU (expected July 2026)",
   github: "github.com/jbrinkw",
   linkedin: "linkedin.com/in/jeremy-brinkworth-424129180",
   email: "jeremy@onthebrink.ai",
@@ -108,7 +108,7 @@ export const experience: Experience[] = [
   {
     role: "Lead AI Engineer (Contract)",
     org: "RevUp AI",
-    period: "Dec 2025 – Feb 2026",
+    period: "Dec 2025 – present",
     location: "Remote",
     bullets: [
       "Lead RevMigrate: agentic SQL Server → PostgreSQL migration on Amazon Bedrock with async phase orchestration and per-object context assembly",
@@ -141,7 +141,7 @@ export const education: Education[] = [
   {
     degree: "M.S. Computer Science",
     school: "Western Governors University",
-    period: "expected June 2026",
+    period: "expected July 2026",
   },
   {
     degree: "B.S. Computer Science",
