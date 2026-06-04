@@ -36,7 +36,7 @@ const resumeExperience: ResumeExperience[] = [
   {
     role: "Lead AI Engineer (Contract)",
     org: "RevUp AI",
-    period: "Dec 2025 – Feb 2026",
+    period: "Dec 2025 – Present",
     location: "Remote",
     bullets: [
       "Designed and led RevMigrate, an agentic SQL Server → PostgreSQL migration system on Amazon Bedrock with async phase orchestration and per-object context assembly → delivered 100% POC success.",
@@ -127,7 +127,7 @@ const resumeEducation = [
   {
     degree: "M.S. Computer Science",
     school: "Western Governors University",
-    period: "Expected June 2026",
+    period: "Expected July 2026",
   },
   {
     degree: "B.S. Computer Science",
@@ -137,9 +137,11 @@ const resumeEducation = [
 ];
 
 const resumeCerts = [
-  "AWS Certified Generative AI Developer Professional",
   "AWS ML Engineer Associate",
+  "AWS AI Practitioner",
   "AWS Cloud Practitioner",
+  "CompTIA SecAI+",
+  "CompTIA Security+",
   "CompTIA Data+",
   "LPI Linux Essentials",
 ];
