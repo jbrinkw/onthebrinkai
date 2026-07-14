@@ -127,7 +127,7 @@ const resumeEducation = [
   {
     degree: "M.S. Computer Science",
     school: "Western Governors University",
-    period: "Expected July 2026",
+    period: "Expected August 2026",
   },
   {
     degree: "B.S. Computer Science",
